@@ -8,9 +8,9 @@ This feature was built to be a part of a whole learning system.
 This project is made up of several ReactJS functional components integrated together to become a whole feature.
 It was built as functional component for separation of functionalities, reusablity and scalability. Also for easy readability.
 
-![Alt text]("src/images/Screenshot 2021-05-10 at 15.37.32.png?raw=true")
-![Alt text]("src/images/Screenshot 2021-05-10 at 15.40.58.png?raw=true")
-![Alt text]("src/images/Screenshot 2021-05-10 at 15.53.57.png?raw=true")
+![Alt text](src/images/Screenshot 2021-05-10 at 15.37.32.png?raw=true)
+![Alt text](src/images/Screenshot 2021-05-10 at 15.40.58.png?raw=true)
+![Alt text](src/images/Screenshot 2021-05-10 at 15.53.57.png?raw=true)
 
 ## Project Components
 
