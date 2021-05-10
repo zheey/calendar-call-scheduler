@@ -314,11 +314,12 @@
   height: 70%;
   position: relative;
   padding: 20px;
-  @include flex(flex, flex-start, space-around);
+  @include flex(flex, center, space-between);
   flex-direction: column;
   h2 {
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    margin-top: 40px;
     letter-spacing: 0.07rem;
     text-transform: uppercase;
   }
@@ -336,4 +337,9 @@
 .italics{
     font-style: italic;
     font-size: smaller !important;
+}
+.div-height{
+  height: 200px;
+  @include flex(flex, center, space-between);
+  flex-direction: column;
 }

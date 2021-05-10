@@ -155,9 +155,11 @@ const Dashboard = () => {
           buttonLabel="Great!"
           onCloseModal={handleCloseSuccess}
         >
+          <div className="div-height">
             <p>A call has been schedule with <span>{getSuccessMessage().mentorName}</span> for <span>{moment(getSuccessMessage().scheduledCall.date_time, moment.defaultFormat).toDate().toString()}</span>.</p>
             <p><span>Reason For Call: </span> {getSuccessMessage().scheduledCall.reasonForSchedule}</p>
             <p className="italics"><span>{getSuccessMessage().mentorName} </span> looks forward to speaking with you.</p>
+          </div>
         </SuccessModal>
       )}
     </div>
