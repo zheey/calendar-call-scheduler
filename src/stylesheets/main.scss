@@ -1,0 +1,339 @@
+@mixin flex($display, $align, $justify) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+.app-body {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.top-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 1px 0 1px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  .avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.sideNav {
+  flex-basis: 15%;
+  background-color: black;
+  .avatar {
+    height: 68px;
+    @include flex(flex, center, center);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    img {
+      width: 80%;
+    }
+  }
+  .navLink-wrapper {
+    width: inherit;
+    a {
+      color: white;
+      width: inherit;
+      height: 40px;
+      padding: 0 20px;
+      list-style: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 14px;
+      @include flex(flex, center, flex-start);
+      text-decoration: none;
+    }
+    a:hover,
+    a:active {
+      background-color: #212124;
+    }
+  }
+}
+.link-active {
+  background-color: #212124;
+}
+
+.mainWrapper {
+  flex-basis: 85%;
+  position: relative;
+}
+.main-wrapper {
+  padding: 0 20px;
+}
+
+.tableContent {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 3px 9px 2px rgba(0, 0, 0, 0.1);
+  tr {
+    display: flex;
+    width: 100%;
+  }
+  th,
+  td {
+    padding: 0 8px;
+  }
+  .tableHeader {
+    @include flex(flex, center, flex-start);
+    text-align: left;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.01rem;
+    box-shadow: 0 3px 9px 2px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  .table-row {
+    min-height: 40px;
+    background: #f3f3f3;
+    align-items: center;
+    font-size: 14px;
+    border-bottom: 1px solid white;
+  }
+  .action-text {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 800;
+    color: #06a006;
+    text-decoration: underline;
+    letter-spacing: 0.008rem;
+    cursor: pointer;
+  }
+}
+.flex-basis-20 {
+  flex-basis: 20%;
+}
+
+.flex-basis-15 {
+  flex-basis: 15%;
+}
+
+.flex-basis-5 {
+  flex-basis: 5%;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  @include flex(flex, center, center);
+}
+
+.calendar-day {
+  background: white;
+  @include flex(flex, center, center);
+  flex-direction: column;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+  th {
+    height: 40px;
+    width: 40px;
+    background: #403f3f;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+  }
+  thead,
+  tr {
+    @include flex(flex, center, center);
+  }
+  tr {
+    @include flex(flex, center, flex-start);
+  }
+  td {
+    height: 35px;
+    width: 40px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+}
+.empty {
+  background: whitesmoke;
+}
+.booked {
+  background: whitesmoke;
+  color: gray;
+}
+.calendar-container {
+  background: white;
+  width: 60%;
+  height: 70%;
+  position: relative;
+  padding: 20px;
+  @include flex(flex, flex-start, space-around);
+  flex-direction: column;
+  h2 {
+    margin: auto;
+    margin-bottom: 50px;
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+  }
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    @include flex(flex, flex-start, flex-start);
+  }
+  .calendar-wrapper {
+    flex-basis: 40%;
+    height: 325px;
+    @include flex(flex, flex-start, center);
+    flex-direction: column;
+  }
+  .mentor-profile {
+    flex-basis: 30%;
+  }
+  .side-wrapper {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+  .timeslot-wrapper {
+    height: 140px;
+    overflow: scroll;
+    .wrapper-time {
+      box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1);
+      display: flex;
+      width: 100%;
+      overflow: scroll;
+      display: -webkit-inline-box;
+      width: 246px;
+      margin-bottom: 5px;
+      height: 58px;
+    }
+    .timeslot {
+      width: 70px;
+      height: 30px;
+      padding: 5px;
+      @include flex(flex, center, center);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .error {
+      color: red;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+  .today {
+    background: #2a2a9a;
+    color: white;
+    border-radius: 50%;
+  }
+  .book {
+    background: #2a2a9a;
+    color: white;
+  }
+  .old {
+    background: whitesmoke !important;
+    color: gray !important;
+    cursor: not-allowed;
+  }
+  .oldTime {
+    color: #e0dede;
+    background: #f9f7f7;
+    cursor: not-allowed;
+  }
+}
+.text-wrapper {
+  label {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  textarea {
+    width: 94%;
+    height: 95px;
+    margin-top: 5px;
+  }
+}
+.button-wrapper {
+  @include flex(flex, center, center);
+  width: 100%;
+  button {
+    height: 50px;
+    padding: 10px;
+    width: 155px;
+    font-size: 14px;
+    font-weight: 800;
+    background: #0e905e;
+    border: 2px solid #0e905e;
+    border-radius: 5px;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+  }
+}
+.nav-wrapper {
+  height: 40px;
+  @include flex(flex, center, space-between);
+  width: 85%;
+  .nav-label {
+    flex-basis: 70%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+  }
+  .nav-control-wrapper {
+    flex-basis: 15%;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .left {
+    @include flex(flex, center, flex-start);
+  }
+  .right {
+    @include flex(flex, center, flex-end);
+  }
+}
+.calendar {
+  min-height: 263px;
+}
+.modal {
+  background: white;
+  width: 60%;
+  height: 70%;
+  position: relative;
+  padding: 20px;
+  @include flex(flex, flex-start, space-around);
+  flex-direction: column;
+  h2 {
+    margin: auto;
+    margin-bottom: 50px;
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+  }
+  span {
+    font-weight: 700;
+  }
+  p {
+    font-size: 16px;
+    width: 60%;
+    margin: auto;
+    line-height: 27px;
+    letter-spacing: 0.02rem;
+  }
+}
+.italics{
+    font-style: italic;
+    font-size: smaller !important;
+}
