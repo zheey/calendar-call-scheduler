@@ -1,11 +1,5 @@
 # Getting Started with Calendar Call Scheduler
 
-## Library Used
-### `ReactJS`
-### `SASS`
-### `MomentJS` and  `MomentTimeZone`
-### `Jest` and `React Testing Library` for testing
-
 ## About Project
 
 Calender call scheduler is a web application feature that allows you to schedule a mentor on an E-learning Application. The call is time-zone friendly as user can schedule a call in their time-zone.
@@ -13,6 +7,10 @@ This feature was built to be a part of a whole learning system.
 
 This project is made up of several ReactJS functional components integrated together to become a whole feature.
 It was built as functional component for separation of functionalities, reusablity and scalability. Also for easy readability.
+
+![Alt text](src/images/Screenshot 2021-05-10 at 15.37.32.png?raw=true)
+![Alt text](src/images/Screenshot 2021-05-10 at 15.40.58.png?raw=true)
+![Alt text](src/images/Screenshot 2021-05-10 at 15.53.57.png?raw=true)
 
 ## Project Components
 
@@ -50,10 +48,6 @@ This was created to make API calls to the backend and retrieve data for the appl
 ### Testing
 Testing for this feature is ongoing.
 
-## Improvements
-This application was built in a short time and there are some modifications that would be done to improve it continually.
-The calendar doesn't have dynamic year and month selection yet. These would be subsequently added to it to make it fully function.
-
 ## Installation
 ### `Clone Repository`:
 This project can only be run on a local machine for now. Kindly clone this repository.
@@ -61,6 +55,15 @@ This project can only be run on a local machine for now. Kindly clone this repos
 ### `Install Dependency`:
 Run `yarn` to install all dependencies.
 
+## Library Used
+### `ReactJS`
+### `SASS`
+### `MomentJS` and  `MomentTimeZone`
+### `Jest` and `React Testing Library` for testing
+
+## Improvements
+This application was built in a short time and there are some modifications that would be done to improve it continually.
+The calendar doesn't have dynamic year and month selection yet. These would be subsequently added to it to make it fully function.
 
 In the project directory, you can run:
 
