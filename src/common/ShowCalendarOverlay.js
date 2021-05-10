@@ -121,6 +121,7 @@ const ShowCalendarOverlay = ({
   return (
     <div className="overlay">
       <div className="calendar-container">
+        <div className="close" onClick={() => onClickAction()}>X</div>
         {context && context.state.isLoading ? (
           <span>Loading...</span>
         ) : (

@@ -334,12 +334,20 @@
     letter-spacing: 0.02rem;
   }
 }
-.italics{
-    font-style: italic;
-    font-size: smaller !important;
+.italics {
+  font-style: italic;
+  font-size: smaller !important;
 }
-.div-height{
+.div-height {
   height: 200px;
   @include flex(flex, center, space-between);
   flex-direction: column;
+}
+.close {
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  cursor: pointer;
+  color: red;
+  font-weight: 600;
 }
